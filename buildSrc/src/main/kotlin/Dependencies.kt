@@ -15,8 +15,8 @@ object Config {
 
         object Room {
             private const val roomVersion = "2.4.2"
-            val runtime = "androidx.room:room-runtime:$roomVersion"
-            val compiler = "androidx.room:room-compiler:$roomVersion"
+            const val runtime = "androidx.room:room-runtime:$roomVersion"
+            const val compiler = "androidx.room:room-compiler:$roomVersion"
         }
 
         object Test {
@@ -69,9 +69,7 @@ object Config {
     }
 
     object Google {
-        const val googleServiceGradle = "com.google.gms:google-services:4.3.10"
         const val material = "com.google.android.material:material:1.4.0"
-        const val playService = "com.google.android.gms:play-services-base:17.6.0"
         const val playServiceAuth = "com.google.android.gms:play-services-auth-api-phone:17.5.1"
         const val playServiceLocation = "com.google.android.gms:play-services-location:18.0.0"
         const val gson = "com.google.code.gson:gson:2.8.8"
@@ -111,6 +109,5 @@ object Config {
     object Modules {
         const val data = ":data"
         const val domain = ":domain"
-        const val presentation = ":presentation"
     }
 }

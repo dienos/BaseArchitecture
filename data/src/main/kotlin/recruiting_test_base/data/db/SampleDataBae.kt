@@ -3,10 +3,10 @@ package recruiting_test_base.data.db
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import recruiting_test_base.data.db.dao.SampleDao
-import recruiting_test_base.data.model.LocalSampleRepoRes
+import recruiting_test_base.data.model.LocalSample
 
 @Database(
-    entities = [LocalSampleRepoRes::class],
+    entities = [LocalSample::class],
     version = 1,
     exportSchema = false
 )

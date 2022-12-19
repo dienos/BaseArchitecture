@@ -31,8 +31,6 @@ android {
 }
 
 dependencies {
-    implementation(project(Config.Modules.domain))
-
     implementation(Config.Square.retrofit)
     implementation(Config.Square.retrofitGsonConverter)
 

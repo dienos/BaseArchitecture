@@ -21,7 +21,6 @@ internal object ApiModule {
     private const val READ_TIMEOUT = 15L
     private const val BASE_URL = "https://api.github.com/"
 
-
     @Provides
     @Singleton
     fun provideOkHttpClient(): OkHttpClient {

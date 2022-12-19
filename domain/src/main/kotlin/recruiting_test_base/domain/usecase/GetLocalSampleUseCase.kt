@@ -1,11 +1,12 @@
 package recruiting_test_base.domain.usecase
 
-import recruiting_test_base.domain.model.local.LocalSampleRepo
-import recruiting_test_base.domain.repository.local.LocalSampleRepository
+import recruiting_test_base.data.model.LocalSample
+import recruiting_test_base.data.repository.SampleRepository
+import javax.inject.Inject
 
-class GetLocalSampleUseCase(private val repository: LocalSampleRepository) {
+class GetLocalSampleUseCase @Inject constructor(private val repository: SampleRepository) {
     suspend operator fun invoke(
-    ): List<LocalSampleRepo> {
+    ): List<LocalSample> {
         return repository.getLocalSample()
     }
 }

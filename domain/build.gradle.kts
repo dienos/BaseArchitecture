@@ -1,6 +1,8 @@
 plugins {
     id(Config.Plugins.library)
     id(Config.Plugins.kotlin)
+    id(Config.Plugins.hilt)
+    id(Config.Plugins.kapt)
 }
 
 android {
@@ -25,5 +27,12 @@ android {
 
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    dependencies {
+        implementation(project(Config.Modules.data))
+        implementation(Config.Android.Hilt.hiltAndroid)
+        kapt(Config.Android.Hilt.hiltAndroidCompiler)
+        kapt(Config.Android.Hilt.hiltCompiler)
     }
 }

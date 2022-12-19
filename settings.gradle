@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "base.architecture"
-include ':presentation'
+include ':ui'
 include ':data'
 include ':domain'
 
