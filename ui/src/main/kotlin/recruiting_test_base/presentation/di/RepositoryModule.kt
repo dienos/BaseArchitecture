@@ -7,7 +7,6 @@ import dagger.hilt.components.SingletonComponent
 import recruiting_test_base.data.datasource.local.SampleLocalSource
 import recruiting_test_base.data.datasource.remote.SampleRemoteSource
 import recruiting_test_base.data.repository.SampleRepository
-import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)

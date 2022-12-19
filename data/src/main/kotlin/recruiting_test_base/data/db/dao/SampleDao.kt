@@ -4,13 +4,13 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import recruiting_test_base.data.model.LocalSample
+import recruiting_test_base.data.model.SampleEntity
 
 @Dao
 interface SampleDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(data: LocalSample)
+    suspend fun insert(data: SampleEntity)
 
     @Query("SELECT * FROM sample")
-    suspend fun getSamples(): List<LocalSample>
+    suspend fun getSamples(): List<SampleEntity>
 }

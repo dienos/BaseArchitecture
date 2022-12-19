@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import recruiting_test_base.data.model.LocalSample
-import recruiting_test_base.data.model.Sample
+import recruiting_test_base.domain.model.LocalSample
+import recruiting_test_base.domain.model.Sample
 import recruiting_test_base.domain.usecase.GetLocalSampleUseCase
 import recruiting_test_base.domain.usecase.GetSampleUseCase
 import javax.inject.Inject
