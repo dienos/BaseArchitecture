@@ -1,8 +1,8 @@
 plugins {
     id(Config.Plugins.library)
     id(Config.Plugins.kotlin)
-    id(Config.Plugins.kapt)
     id(Config.Plugins.hilt)
+    id(Config.Plugins.kapt)
 }
 
 android {
@@ -33,16 +33,17 @@ android {
 dependencies {
     implementation(Config.Square.retrofit)
     implementation(Config.Square.retrofitGsonConverter)
+    implementation(Config.Square.otto)
+    implementation(Config.Square.retrofitGsonConverter)
+    implementation(Config.Square.retrofitRxJava3Adapter)
+    implementation(Config.Square.okhttp)
+    implementation(Config.Square.okhttpLogging)
 
     implementation(Config.Android.Room.runtime)
     annotationProcessor(Config.Android.Room.compiler)
 
+    implementation(Config.Android.Hilt.hiltAndroid)
     kapt(Config.Android.Hilt.hiltAndroidCompiler)
     kapt(Config.Android.Hilt.hiltCompiler)
-    implementation(Config.Android.Hilt.hiltAndroid)
     implementation(Config.Android.Hilt.hiltLifecycleViewModel)
-
-    testImplementation(Config.Android.Test.mockk)
-    testImplementation(Config.Kotlin.Coroutine.coroutineTest)
-    testImplementation(Config.Android.Test.core)
 }

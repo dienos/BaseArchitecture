@@ -38,14 +38,14 @@ android {
     buildFeatures {
         dataBinding = true
     }
+
+    hilt {
+        enableAggregatingTask = true
+    }
 }
 
 dependencies {
-    implementation(project(Config.Modules.data))
     implementation(project(Config.Modules.domain))
-
-    implementation(Config.Android.Room.runtime)
-    annotationProcessor(Config.Android.Room.compiler)
 
     implementation(Config.Android.Hilt.hiltAndroid)
     kapt(Config.Android.Hilt.hiltAndroidCompiler)
@@ -58,13 +58,6 @@ dependencies {
     implementation(Config.Google.playServiceAuth)
     implementation(Config.Google.playServiceLocation)
     implementation(Config.Google.gson)
-
-    implementation(Config.Square.otto)
-    implementation(Config.Square.retrofit)
-    implementation(Config.Square.retrofitGsonConverter)
-    implementation(Config.Square.retrofitRxJava3Adapter)
-    implementation(Config.Square.okhttp)
-    implementation(Config.Square.okhttpLogging)
 
     implementation(Config.Android.KTX.activity)
     implementation(Config.Android.KTX.fragment)

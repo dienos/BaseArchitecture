@@ -1,4 +1,4 @@
-package recruiting_test_base.presentation.di
+package recruiting_test_base.data.di
 
 import android.content.Context
 import androidx.room.Room

@@ -4,8 +4,12 @@ import recruiting_test_base.data.db.dao.SampleDao
 import recruiting_test_base.data.model.SampleEntity
 import javax.inject.Inject
 
-class SampleLocalSource @Inject constructor(
+interface SampleLocalSource {
+    suspend fun getLocalSimple(): List<SampleEntity>
+}
+
+class SampleLocalSourceImpl @Inject constructor(
     private val dao: SampleDao
-) {
-    suspend fun getLocalSimple(): List<SampleEntity> = dao.getSamples()
+) : SampleLocalSource {
+    override suspend fun getLocalSimple(): List<SampleEntity> = dao.getSamples()
 }

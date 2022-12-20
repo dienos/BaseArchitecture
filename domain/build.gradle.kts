@@ -31,8 +31,10 @@ android {
 
     dependencies {
         implementation(project(Config.Modules.data))
+
         implementation(Config.Android.Hilt.hiltAndroid)
         kapt(Config.Android.Hilt.hiltAndroidCompiler)
         kapt(Config.Android.Hilt.hiltCompiler)
+        implementation(Config.Android.Hilt.hiltLifecycleViewModel)
     }
 }

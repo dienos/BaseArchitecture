@@ -1,4 +1,4 @@
-package recruiting_test_base.presentation.di
+package recruiting_test_base.data.di
 
 import dagger.Module
 import dagger.Provides
@@ -37,7 +37,7 @@ internal object ApiModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(client: OkHttpClient): Retrofit {
+    fun providesRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -47,7 +47,7 @@ internal object ApiModule {
 
     @Provides
     @Singleton
-    fun provideDeliveryService(retrofit: Retrofit): SampleService {
+    fun providesService(retrofit: Retrofit): SampleService {
         return retrofit.create(SampleService::class.java)
     }
 }
